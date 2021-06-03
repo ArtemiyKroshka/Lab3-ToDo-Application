@@ -1,4 +1,4 @@
-# todos app | fullstack mevn (frontend)
+# ToDo Application
 
 ## Project setup
 
