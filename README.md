@@ -24,8 +24,6 @@ npm run build
 
 * GET /api/todos (retrieves todolist from DB and returns as an array)
 
-* GET /api/todo/:id (retrieves single todo task from DB and returns as object)
-
 * POST /api/todo (adds a todo task to the todolist in DB)
 
 * PUT /api/todo/:id (updates todo task in DB)
