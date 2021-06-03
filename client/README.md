@@ -24,11 +24,3 @@ npm run build
 npm run lint
 ```
 
-### Customize configuration
-
-See [Configuration Reference](https://cli.vuejs.org/config/).
-
-## License
-
-[MIT](http://opensource.org/licenses/MIT)
-Copyright (c) 2020 Martin Sit
