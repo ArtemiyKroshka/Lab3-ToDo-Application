@@ -65,7 +65,7 @@
                                 "schema": {
                                     "type": "array",
                                     "items": {
-                                        "$ref": "#/server/models/todo"
+                                        "$ref": "#/components/schemas/Todo"
                                     }
                                 }
                             }
@@ -102,7 +102,7 @@
                             "application/json": {
                                 "schema": {
                                     "type": "object",
-                                    "$ref": "#/server/models/todo"
+                                    "$ref": "#/components/schemas/Todo"
                                 }
                             }
                         }
@@ -179,7 +179,7 @@
                             "application/json": {
                                 "schema": {
                                     "type": "object",
-                                    "$ref": "#/server/models/todo"
+                                    "$ref": "#/components/schemas/Todo"
                                 }
                             }
                         }
