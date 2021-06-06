@@ -1,8 +1,7 @@
 <template>
   <div id="app">
     <section class="todoapp">
-      <PageTitle title="todos app" />
-      <Todo />
+      <Todo/>
     </section>
   </div>
 </template>
