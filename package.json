@@ -8,7 +8,7 @@
     "start": "node server/app.js"
   },
   "keywords": [],
-  "author": "Roman Popil",
+  "author": "Artem Kroshka",
   "license": "MIT",
   "devDependencies": {
     "nodemon": "^2.0.4"
