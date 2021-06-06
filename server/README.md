@@ -1,4 +1,4 @@
-# todos app | fullstack mevn (backend)
+# ToDo Application
 
 ## Project setup
 
@@ -17,8 +17,3 @@ npm run dev
 ```
 npm run start
 ```
-
-## License
-
-[MIT](http://opensource.org/licenses/MIT)
-Copyright (c) 2020 Martin Sit
