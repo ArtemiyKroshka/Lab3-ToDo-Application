@@ -1,6 +1,9 @@
 <template>
   <section class="main">
     <h1>Todo App</h1>
+    <div class="swagger">
+        <a href="/api-docs"><button>Swagger</button></a>
+      </div>
     <form class="mb-3">
       <label>New ToDo</label>
       <input
@@ -32,9 +35,6 @@
       <button @click="visibility='all'" class="btn-footer">Show All</button>
       <button @click="visibility='active'" class="btn-footer">Show Active</button>
       <button @click="visibility='completed'" class="btn-footer">Show Completed</button>
-      </div>
-      <div class="swagger">
-        <a href="/api-docs"><button>Swagger</button></a>
       </div>
     </div>
     <p v-else class="footer-text">Empty list.</p>
