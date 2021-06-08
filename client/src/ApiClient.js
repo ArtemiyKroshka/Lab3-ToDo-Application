@@ -1,5 +1,5 @@
 // REST API URL
-const url = "api"
+const url = "http://localhost:5000/api"
 
 // Asynchronous Client using Javascript Fetch APIs 
 class ApiClient {

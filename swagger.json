@@ -6,7 +6,7 @@
         "version": "1.0.0"
     },
     "servers": [{
-        "url": "/api"
+        "url": "http://localhost:5000/api"
     }],
     "security": [{
         "bearerAuth": []
@@ -51,7 +51,7 @@
         }
     },
     "paths": {
-        "/todo": {
+        "/todos": {
             "get": {
                 "tags": [
                     "Todo"
@@ -75,7 +75,9 @@
                         "$ref": "#/components/responses/serverError"
                     }
                 }
-            },
+            }
+        },
+        "/todo": {
             "post": {
                 "tags": [
                     "Todo"
