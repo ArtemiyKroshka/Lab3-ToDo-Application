@@ -7,10 +7,9 @@ const Todo = require("../models/todo");
 
 const router = express.Router();
 
-// Retrieve all todo tasks
+// Find all from MongoDB and return array
 router.get('/todos', (req, res) => {
 
-    // Find all from MongoDB and return array
     Todo.find()
         .then(todos => {
             res.json(todos);
@@ -21,14 +20,14 @@ router.get('/todos', (req, res) => {
 // Add todo task
 router.post('/todo', (req, res) => {
 
-    // If todo task is not present in request, return a 400 error
+    // If there is no todo task, return a 400 error
     if (!req.body.todo || req.body.todo === "") {
         return res.status(400).json({
             "error": 400
         });
     }
 
-    // Create a Todo object and save to MongoDB
+    // Create Todo and save to MongoDB
     const newTodo = new Todo({
         todo: req.body.todo,
     })
@@ -44,7 +43,7 @@ router.post('/todo', (req, res) => {
 router.get('/todo/:id', (req, res) => {
     let id = req.params.id;
 
-    // If ID is not a valid ObjectID then return a 400 error
+    // If ID is not valid then return a 400 error
     if (!isValidObjectId(id)) {
         return res.status(400).json({
             "error": 400

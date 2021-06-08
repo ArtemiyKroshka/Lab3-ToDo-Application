@@ -71,7 +71,7 @@ class ApiClient {
         })
     }
 
-    // Modify/edit todolist task
+    //Complete todolist task
     static editTask(id, task, completed) {
         return new Promise((resolve, reject) => {
             fetch(`${url}/todo/${id}`, {

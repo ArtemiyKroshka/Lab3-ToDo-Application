@@ -12,7 +12,7 @@
         v-model="newTask"
         @keyup.enter="addTask(newTask)"
       />
-      <button class="" type="button" @click="addTask(newTask)">Add ToDo</button>
+      <button type="button" @click="addTask(newTask)">Add ToDo</button>
     </form>
 
     <div class="todo-list" v-if="todoList.length > 0" v-cloak>
@@ -89,36 +89,36 @@ export default {
       if (!/\S/.test(task)) return;
       await ApiClient.addTask(task)
         .then(() => {
-          this.newTask = ""; // Clear input field
+          this.newTask = "";
           this.retrieveTasks(); // Reload the array
         })
         .catch(err => this.$toastr.e(`An error occurred : ${err}`));
     },
     // Delete task from todolist
     deleteTask: async function(id, el=null) {
-      if(el) el.parentElement.disabled = true; // Disable button after click to prevent 404 error
+      if(el) el.parentElement.disabled = true; 
       await ApiClient.deleteTask(id)
         .then(() => {
-          this.retrieveTasks(); // Reload the array
+          this.retrieveTasks(); 
         })
         .catch(err => this.$toastr.e(`An error occurred : ${err}`));
     },
     // Edit task in todolist
     editTask: async function(id, task, completed ) {
-      this.beforeEditCache = task; // Save the task to edit cache
-      if (!/\S/.test(task)) return; // Return if the new task is empty
+      this.beforeEditCache = task; 
+      if (!/\S/.test(task)) return; 
       await ApiClient.editTask(id, task, completed)
         .then(() => {
-          this.retrieveTasks(); // Reload the array
+          this.retrieveTasks(); 
         })
         .catch(err => this.$toastr.e(`An error occurred : ${err}`));
     },
     // Revert the task back to the state in the cache
     cancelEdit: async function(id, completed) {
-      if (!/\S/.test(this.beforeEditCache)) return; // Return if the cache is empty
+      if (!/\S/.test(this.beforeEditCache)) return; 
       await ApiClient.editTask(id, this.beforeEditCache, completed, false)
         .then(() => {
-          this.retrieveTasks(); // Reload the array
+          this.retrieveTasks();
         })
         .catch(err => this.$toastr.e(`An error occurred: ${err}`));
     },
